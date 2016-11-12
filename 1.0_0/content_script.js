@@ -36,19 +36,12 @@ function handleText(textNode)
 
 	v = v.replace(/(Donald Trump)/gi, "****** *****"); // Replace "****** *****" with any text of your choice
 	v = v.replace(/(Donald J\. Trump)/gi, "****** * *****"); // Replace "****** * *****" with any text of your choice
-	v = v.replace(/(Trump)/gi, "*****"); // Feel free to replace the "*****" with any text of your choice
+	v = v.replace(/(Trump)/gi, "*****"); // Replace the "*****" with any text of your choice
 
 
 
 	textNode.nodeValue = v;
 }
-
-
-
-// document.body.innerHTML = document.body.innerHTML.replace(/trump/gi, "idiot");
-
-
-
 
 
 
@@ -59,8 +52,8 @@ var readyStateCheckInterval = setInterval(function() {
     clearInterval(readyStateCheckInterval);
     $('img').each(function(i,e){
       var $e = $(e);
-      if (('' + $e.attr('src') + $e.attr('alt') + $e.attr('title')).match(/(trump|election)/i)) {
-      $e.attr('src', 'http://placehold.it/' + $e.width() + 'x' + $e.height())
+      if (('' + $e.attr('src') + $e.attr('alt') + $e.attr('title') + $e.attr('data-mediaviewer-caption')).match(/(trump|pence|president|election)/i)) {
+      $e.attr('src', 'http://placehold.it/' + $e.width() + 'x' + $e.height()) // Replace placehold.it with any placeholder service of your choice.
     }
     });
 
