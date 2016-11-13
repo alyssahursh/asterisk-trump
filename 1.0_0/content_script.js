@@ -76,13 +76,23 @@ var should_censor_image = function ($e) {
 	return false;
 };
 
+var placeholdit = function placeholdit($e) {
+    $e.attr('src', 'https://placehold.it/' + $e.width() + 'x' + $e.height());
+};
+var baconmockup = function baconmockup($e) {
+    $e.attr('src', 'https://baconmockup.com/' + $e.width() + '/' + $e.height());
+};
+var xoart_capibara = function xoart_capibara($e) {
+    $e.attr('src', 'https://xoart.link/' + $e.width() + '/' + $e.height() + '/capibara');
+};
+
 var readyStateCheckInterval = setInterval(function () {
     if (document.readyState === "complete") {
         clearInterval(readyStateCheckInterval);
         $('img').each(function (i, e) {
             var $e = $(e);
             if (should_censor_image($e)) {
-                $e.attr('src', 'http://placehold.it/' + $e.width() + 'x' + $e.height());  // Replace placehold.it with any placeholder service of your choice.
+                placeholdit($e);
             }
         });
     }
