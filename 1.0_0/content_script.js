@@ -50,7 +50,8 @@ function handleText(textNode)
 var censor_re = /(trump|pence|president|election)/i;
 
 var should_censor_image = function ($e) {
-    var img_attributes = (
+    var img_attributes, parent_link, link_attributes;
+    img_attributes = (
         ''
         + $e.attr('src')
         + $e.attr('alt')
@@ -59,6 +60,18 @@ var should_censor_image = function ($e) {
     );
     if (img_attributes.match(censor_re)) {
     	return true;
+	}
+    parent_link = $e.closest("a");
+    if (parent_link.length) {
+    	link_attributes = (
+    		''
+			+ parent_link.attr('url')
+			+ parent_link.attr('href')
+			+ parent_link.attr('title')
+		);
+		if (link_attributes.match(censor_re)) {
+    		return true;
+		}
 	}
 	return false;
 };
