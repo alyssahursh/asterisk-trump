@@ -47,15 +47,30 @@ function handleText(textNode)
 
 // Source: http://stoptonymeow.com/
 
-var readyStateCheckInterval = setInterval(function() {
-  if (document.readyState === "complete") {
-    clearInterval(readyStateCheckInterval);
-    $('img').each(function(i,e){
-      var $e = $(e);
-      if (('' + $e.attr('src') + $e.attr('alt') + $e.attr('title') + $e.attr('data-mediaviewer-caption')).match(/(trump|pence|president|election)/i)) {
-      $e.attr('src', 'http://placehold.it/' + $e.width() + 'x' + $e.height()) // Replace placehold.it with any placeholder service of your choice.
-    }
-    });
+var censor_re = /(trump|pence|president|election)/i;
 
-  }
-  }, 10);
+var should_censor_image = function ($e) {
+    var img_attributes = (
+        ''
+        + $e.attr('src')
+        + $e.attr('alt')
+        + $e.attr('title')
+        + $e.attr('data-mediaviewer-caption')
+    );
+    if (img_attributes.match(censor_re)) {
+    	return true;
+	}
+	return false;
+};
+
+var readyStateCheckInterval = setInterval(function () {
+    if (document.readyState === "complete") {
+        clearInterval(readyStateCheckInterval);
+        $('img').each(function (i, e) {
+            var $e = $(e);
+            if (should_censor_image($e)) {
+                $e.attr('src', 'http://placehold.it/' + $e.width() + 'x' + $e.height());  // Replace placehold.it with any placeholder service of your choice.
+            }
+        });
+    }
+}, 10);
