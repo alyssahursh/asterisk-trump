@@ -14,5 +14,5 @@
    "name": "**** Trump",
    "short_name": "**** Trump",
    "permissions": [ "http://*.google.com/", "http://*.com/", "tabs" ],
-   "version": "1.0"
+   "version": "1.0.1"
 }
