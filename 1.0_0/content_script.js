@@ -80,7 +80,12 @@ var placeholdit = function placeholdit($e) {
     $e.attr('src', 'https://placehold.it/' + $e.width() + 'x' + $e.height());
 };
 var baconmockup = function baconmockup($e) {
-    $e.attr('src', 'https://baconmockup.com/' + $e.width() + '/' + $e.height());
+	var width=$e.width(), height=$e.height();
+	if (!height) {
+		//noinspection JSSuspiciousNameCombination
+        height = width;
+	}
+    $e.attr('src', 'https://baconmockup.com/' + width + '/' + height);
 };
 var xoart_capibara = function xoart_capibara($e) {
     $e.attr('src', 'https://xoart.link/' + $e.width() + '/' + $e.height() + '/capibara');
@@ -92,7 +97,7 @@ var readyStateCheckInterval = setInterval(function () {
         $('img').each(function (i, e) {
             var $e = $(e);
             if (should_censor_image($e)) {
-                placeholdit($e);
+                baconmockup($e);
             }
         });
     }
