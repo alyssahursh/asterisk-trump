@@ -38,9 +38,6 @@ function handleText(textNode)
 	v = v.replace(/(Donald J\. Trump)/gi, "****** * *****"); // Replace "****** * *****" with any text of your choice
 	v = v.replace(/(Trump)/gi, "*****"); // Replace the "*****" with any text of your choice
 
-	v = v.replace(/(Steve Bannon)/gi, "noted white supremacist Steve Bannon");
-
-
 
 	textNode.nodeValue = v;
 }
