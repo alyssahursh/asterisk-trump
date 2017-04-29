@@ -1,8 +1,8 @@
 # fuck-*****
-A Chrome extension to replace D o n a l d  T r u m p with ****** ***** and to replace pictures of his face with a plain gray box. Get it [here](https://chrome.google.com/webstore/detail/trump/oahajgphigbipdeclpinffdaadihblcg).
+A Chrome extension to replace D o n a l d  T r u m p with ****** ***** and to replace pictures of his face with a plain gray box. Get it [here](https://chrome.google.com/webstore/detail/*****/oahajgphigbipdeclpinffdaadihblcg).
 
 ## Here's what it looks like
-![Fuck Trump in action](/Fuck_trump_example.pngraw=true "Fuck Trump in action")
+![Fuck ***** in action](/Fuck_trump_example.png?raw=true "Fuck ***** in action")
 
 ## Why did you build this?
 * I just needed to get his name and face out of my line of sight for a while.
