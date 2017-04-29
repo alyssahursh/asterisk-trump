@@ -2,7 +2,7 @@
 A Chrome extension to replace Donald Trump with ****** ***** and to replace pictures of his face with a plain gray box. Get it [here](https://chrome.google.com/webstore/detail/*****/oahajgphigbipdeclpinffdaadihblcg).
 
 ## Here's what it looks like
-![In action](/Chrome_extension.png?raw=true In action")
+![In action](/Chrome_extension.png?raw=true "In action")
 
 ## Why did you build this?
 * I just needed to get his name and face out of my line of sight for a while.
