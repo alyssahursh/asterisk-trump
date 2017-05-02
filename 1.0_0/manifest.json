@@ -1,18 +1,18 @@
 {
    "browser_action": {
       "default_icon": "icon.png",
-      "default_title": "**** Trump"
+      "default_title": "**** *****"
    },
    "content_scripts": [ {
       "js": [ "js/jquery/jquery.js", "content_script.js" ],
       "matches": [ "*://*/*" ],
       "run_at": "document_end"
    } ],
-   "description": "Removes images of Trump and replace his name with ******",
+   "description": "Removes images of ***** and replace his name with ******",
    "author": "Alyssa Hursh",
    "manifest_version": 2,
-   "name": "**** Trump",
-   "short_name": "**** Trump",
+   "name": "**** *****",
+   "short_name": "**** *****",
    "permissions": [ "http://*.google.com/", "http://*.com/", "tabs" ],
    "version": "1.0.3"
-}
+} 
