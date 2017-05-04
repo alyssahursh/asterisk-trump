@@ -1,5 +1,5 @@
-# Fuck Trump
-A Chrome extension to replace Donald Trump with ****** ***** and to replace pictures of his face with a plain gray box. Get it [here](https://chrome.google.com/webstore/detail/*****/oahajgphigbipdeclpinffdaadihblcg).
+# Asterisk Trump
+A Chrome extension to replace Donald Trump with ****** ***** and to replace pictures of his face with a plain gray box. Get it [here](https://chrome.google.com/webstore/detail/trump/oahajgphigbipdeclpinffdaadihblcg).
 
 ## Here's what it looks like
 ![In action](/Chrome_extension.png?raw=true "In action")
